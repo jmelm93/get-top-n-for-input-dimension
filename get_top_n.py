@@ -17,7 +17,7 @@ def main(df, grouped_dimension_list, analysis_dimension, metric, n):
     return top_keywords_per_url.merge(df, on=['URL', 'Keyword'], how='left')
 
 if __name__ == '__main__':
-    df = pd.read_csv('turbo-tax-semrush.csv')
+    df = pd.read_csv('INPUT_FILE.csv')
 
     # filter df to Traffic > 0
     df = df[df['Traffic'] > 10]
